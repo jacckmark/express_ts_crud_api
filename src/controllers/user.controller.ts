@@ -1,5 +1,4 @@
-import { pool } from "../db";
-import { NextFunction, Request, Response } from "express";
+import { Request, Response } from "express";
 import { getAll, getById, create, update, deleteOne } from "../services/user.service";
 
 const getUsers = async (req: Request, res: Response) => {

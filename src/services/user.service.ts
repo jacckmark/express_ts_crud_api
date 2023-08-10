@@ -1,4 +1,4 @@
-import { pool } from "../db";
+import { pool } from "../configs/db";
 import { emptyOrRows, recheckIdFormat } from "../utils/helper";
 import { user } from "../models/user";
 
@@ -22,8 +22,6 @@ export const create = async (user: user) => {
     user.name,
     user.email
   ]);
-
-  console.log(result);
 
   if (result.rowCount) return { message: `New user with ID ${result.rows[0].id} created` };
 
