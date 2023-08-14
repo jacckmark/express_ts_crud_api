@@ -1,4 +1,19 @@
-.env
-dist
-.vscode
+# logs
+logs
+*.log
+npm-debug.log*
+
+# node modules stuff
 node_modules
+package-lock.json
+
+# builds
+dist
+dist-ssr
+*.local
+
+# env variables
+.env
+
+# editor configs
+.vscode
