@@ -3,7 +3,7 @@ import { useThemeContext } from "../context/themeContext";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 
-export const MainContainer = ({ children }: { children: ReactNode }) => {
+export const AuthPageContainer = ({ children }: { children: ReactNode }) => {
   const { theme } = useThemeContext();
 
   return (
@@ -16,3 +16,7 @@ export const MainContainer = ({ children }: { children: ReactNode }) => {
     </div>
   );
 };
+
+export const withAuthContainer = (wrappedComponent: ReactNode) => (
+  <AuthPageContainer>{wrappedComponent}</AuthPageContainer>
+);
